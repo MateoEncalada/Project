@@ -19,6 +19,7 @@ public class Target : MonoBehaviour
     void Die ()
     {
         OnEnemyDestroyed?.Invoke(gameObject);
+        OnEnemyDestroyed = null;
         Destroy(gameObject);
         DropItem();
     }

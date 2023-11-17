@@ -14,6 +14,7 @@ public class DestroyG : MonoBehaviour
     {
         if (other.CompareTag("Glass"))
         {
+            FindAnyObjectByType<GameManager>().AddGlass();
             source.Play();
             Destroy (other.gameObject);
         }

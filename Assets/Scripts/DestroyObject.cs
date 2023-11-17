@@ -14,6 +14,7 @@ public class DestroyObject : MonoBehaviour
     {
         if (other.CompareTag("Organics"))
         {
+            FindAnyObjectByType<GameManager>().AddOrganic();
             source.Play();
             Destroy (other.gameObject);
         }

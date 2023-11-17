@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 7700488592468982018}
   - component: {fileID: 4518198140853104482}
   - component: {fileID: 5564142934726719881}
+  - component: {fileID: 4226841212177347076}
+  - component: {fileID: 4742480944250046048}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Cube
@@ -29,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1239535003117821332}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.609472, y: 2.916707, z: 14.28}
+  m_LocalPosition: {x: 82.55, y: 4.53, z: 14.641}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -119,5 +121,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
-  DItem: {fileID: 0}
+  DItem: {fileID: 5737211708368682631, guid: bad0df837c823cc4cbec40250b7567df, type: 3}
   transform: {fileID: 4237831944031142408}
+--- !u!195 &4226841212177347076
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239535003117821332}
+  m_Enabled: 1
+  m_AgentTypeID: -1372625422
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &4742480944250046048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239535003117821332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6dd379e4f0f02a4881741205cedbc32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 8743262887365637584, guid: 97d9d89d1d335aa439fed7e1b788a74f, type: 3}

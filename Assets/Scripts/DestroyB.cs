@@ -14,6 +14,7 @@ public class DestroyB : MonoBehaviour
     {
         if (other.CompareTag("Bottle"))
         {
+            FindAnyObjectByType<GameManager>().AddBottle();
             source.Play();
             Destroy (other.gameObject);
         }

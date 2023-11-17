@@ -10,6 +10,7 @@ TagManager:
   - Glass
   - Cube
   - Sphere
+  - Trash
   layers:
   - Default
   - TransparentFX

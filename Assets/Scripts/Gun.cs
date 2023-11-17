@@ -53,16 +53,16 @@ void Awake()
             {
                 contDisparos++;
 
-                   if (contDisparos>= 2)
-                    { 
-                            conteo.CubosElim();
-                            contDisparos=0;
+                   if (conteo != null && contDisparos >= 2)
+                    {
+                        conteo.CubosElim();
+                        contDisparos = 0;
                     }
             } 
             else if (hit.transform.CompareTag("Sphere")) 
             {
                 contDisparos++;
-                if (contDisparos>= 3)
+                if (conteoEsferas != null && contDisparos >= 3)
                     { 
                             conteoEsferas.EsferaEliminada();
                             contDisparos=0;
