@@ -17,14 +17,51 @@ public class GameManager : MonoBehaviour
 
     public void AddOrganic()
     {
-        OrganicN = OrganicN + 1;
+        /*OrganicN = OrganicN + 1;
 
         OrganicNumeroText.text = OrganicN.ToString();
         if(OrganicN >= 2)
         {
             ActivateObject();
-        }
+        }*/
+         OrganicN++;
+        OrganicNumeroText.text = OrganicN.ToString();
+        CheckCountsAndActivate();
 
+    }
+    /*void ActivateObject()
+    {
+        if (objectToActivate != null)
+        {
+            objectToActivate.SetActive(true); // Activate the GameObject
+        }
+    }*/
+
+    public void AddBottle()
+    {
+        /*BottleN = BottleN + 1;
+
+        BottleNumeroText.text = BottleN.ToString();*/
+        BottleN++;
+        BottleNumeroText.text = BottleN.ToString();
+        CheckCountsAndActivate();
+
+    }
+    public void AddGlass()
+    {
+        /*GlassN = GlassN + 1;
+
+        GlassNumeroText.text = GlassN.ToString();*/
+        GlassN++;
+        GlassNumeroText.text = GlassN.ToString();
+        CheckCountsAndActivate();
+    }
+    void CheckCountsAndActivate()
+    {
+        if (OrganicN >= 2 && BottleN >= 2 && GlassN >= 2)
+        {
+            ActivateObject();
+        }
     }
     void ActivateObject()
     {
@@ -32,17 +69,5 @@ public class GameManager : MonoBehaviour
         {
             objectToActivate.SetActive(true); // Activate the GameObject
         }
-    }
-    public void AddBottle()
-    {
-        BottleN = BottleN + 1;
-
-        BottleNumeroText.text = BottleN.ToString();
-    }
-    public void AddGlass()
-    {
-        GlassN = GlassN + 1;
-
-        GlassNumeroText.text = GlassN.ToString();
     }
 }
