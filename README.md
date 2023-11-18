@@ -31,7 +31,7 @@ Este es el Feature mas complejo, en nuestro objeto de jugador deberos poner este
 Los objetos que pueden ser levantados necesitaran un layer activado en este, en este caso se creo un Layer "Pickup" Este Layer nuevo debera ir referenciado en el Script en la Parte que esta descrita como Pickup Mask y en la referencia de Pickup Target debera ir nuestro objeto que usaremos de referencia para mostrar el objeto levantado en este caso sera el objeto vacio creado dentro prefab de jugador.
 ## Vida enemigos y Drop de item al ser destruidos
 Todos nuestro enemigos estaran conectados con nuestro Script Target (Revisar dentro de los archivos para ver Script) Dentro de este representa un objetivo que puede recibir daño y ser destruido gracais a la variable health donde esta tiene un metodo take damage que esta relacionada con el Script gun para que puedan interactuar entre estos. Existe un metodo Die que es el encargado de de destruir el objeto al igual que tiene un metodo DropItem que es el encargado de instanciar un objeto para que aparezca.
-##Spawnear enemigos 
+## Spawnear enemigos 
 Este feature esta relacionado con el Script "SpawnerTimer"(Revisar dentro de los archivos para ver Script) este Script esta conectado a un objeto vacio ubicado en cualquier posicion del mundo ya que la ubicacion de donde se spawnean se realiza mediante codigo. Al ser un poco complejo el script lo explicare de una forma mas especifica. 
 Este código es un spawner en Unity que genera enemigos a intervalos regulares y los gestiona mientras están activos en la escena. Aquí está su funcionamiento:
 Declaraciones iniciales:
@@ -52,9 +52,9 @@ Comprueba si el enemigo destruido existe y está en la lista de enemigos generad
 Si es así, elimina el delegado HandleEnemyDestroyed del evento OnEnemyDestroyed del enemigo destruido.
 Luego, elimina ese enemigo de la lista de enemigos generados.
 Este script básicamente genera enemigos en intervalos de tiempo regulares siempre que la cantidad actual de enemigos en la escena sea menor que el límite establecido. Además, administra la lista de enemigos generados y elimina correctamente los enemigos destruidos de esta lista cuando se destruyen en la escena.
-##Activar objetos cuando se cumpla una condicion y sonido 
+## Activar objetos cuando se cumpla una condicion y sonido 
 Para este feature tenemos dos Scripts el uno llamado "GameManager" en este se iran contando los objetos destruidos al igual que es el encargado de activar el objeto el Otro Script llamado "DestroyObject" en este se hace un llamado al un metodo de nuestro priemer Script Que es el contador al igual que al momento de que suceda emitira un sonido y por ultimo destruira el objeto mediante un Tag.
-##Enemigo te detecta al entrar en rango 
+## Enemigo te detecta al entrar en rango 
 Dentro del Script de Navigation que posee lo ya visto para que un enemigo te siga se debera agregar un atributo rango y dentro del Update exisitira un if encargado de comprobar que se cumpla la condicion del rango, Calcula la distancia entre el objeto y el jugador usando Vector3.Distance. 
 Si la distancia es mayor que el rango de seguimiento, detiene el movimiento estableciendo la posición de destino del NavMeshAgent como la posición actual del objeto, lo que efectivamente detiene el movimiento. Este script asegura que el objeto con este componente de navegación siga al jugador cuando el jugador está dentro del rango de seguimiento especificado y se detenga cuando el jugador esté fuera de ese rango.
 
